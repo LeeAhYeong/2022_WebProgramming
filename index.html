@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Korean Wave introduction</title>
+    <style>
+        /*외부 스타일 시트 적용*/
+        @import url(header.css);
+        @import url(navigation.css);
+        @import url(main.css);
+        @import url(footer.css);
+        @import url(preference.css);
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+</head>
+<body>
+    <header class = "header">
+        <h2><a href = "index.html" target = "_self">What is the <strong>HALLYU</strong>?</a>
+            <img src = "media/koreaFlag.png" alt = "img" width = "30"></h2>
+    </header>
+    <nav id = "nav">
+        <ul>
+            <li><a href = "index.html" target = "_self">About Hallyu</a></li>
+            <li><a href = "#menu1">한류의 영향력</a>
+                <ul>
+                    <li><a href = "#menu1-1">한국 연상 이미지</a></li>
+                    <li><a href = "#menu1-2">인식 변화</a></li>
+                    <li><a href = "#menu1-3">한국 문화컨텐츠 호감도</a></li>
+                    <li><a href = "#menu1-4">한국 문화컨텐츠 소비 비중</a></li>
+                </ul>
+            </li>  
+            <li><a href = "#menu2">문화콘텐츠 카테고리별 선호도</a>
+                <ul>
+                    <li><a href = "#menu2-1">한국 드라마</a></li>
+                    <li><a href = "#menu2-2">한국 배우</a></li>
+                    <li><a href = "#menu2-3">한국 영화</a></li>
+                    <li><a href = "#menu2-4">한국 가수/그룹</a></li>
+                </ul>
+            </li>  
+            <li><a href = "Aboutme.html" target = "_self">About me</a></li> 
+        </ul>
+    </nav>
+    <section>
+        <table>
+            <tbody> 
+                <tr>
+                    <td><img src = "media/TheKoreanWave.jpg" max-width = "100%" height = "350px"></td>
+                    <td id = def >한류: <i>"한국의 대중문화"</i> 가 아시아를 중심으로 해외로 전파되어 인기리에 소비되는 문화 현상</td>
+                </tr>
+            </tbody>
+        </table> 
+    </section>
+
+    <section id = content>
+        <h3>한류 근황</h3>
+        <hr>
+        <table>
+            <tr>
+                <td id = def2>최근 K-POP에 열광하는 유럽 청소년들이 증가하고있습니다. 우리 나라는 이제까지 외래 문물을
+                    받아들이거나 모방해온 나라에서, 새로운 문화를 창조하고 그것을 전수하는 위대한 나라로 탈바꿈하고 있는 것입니다.
+                    한국 문화는 저력이 있고 날이 갈수록 탄력이 붙고 있습니다. 이제 한류는 유럽을 넘어 남아메리카, 동남아와 아프리카에까지 
+                    그 영역을 확장하고 있습니다.
+                </td>
+                <td><iframe width="500" height="330" src="https://www.youtube.com/embed/U4fMnEJeVNo" title="YouTube video player" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </section>
+
+    <section id = "list">
+        <ul>
+            <li>
+                <ul><a id = "menu1">한류의 영향력</a>
+                    <li><a id = "menu1-1">한국의 연상 이미지</a></li>
+                    <table>
+                        <tr>
+                            <td><img src = "media/menu1-1.png" width = "420px" height="400"></td>
+                            <td id = "def3">
+                                해외 한류 소비자들은 한국 연상 이미지로 5년 연속 'K-Pop'(14%)을 가장 먼저 떠올렸습니다. 이어
+                                '한식'(11.5%),'드라마'(7.5%),'한류스타'(7.0%),'IT제품/브랜드'(6.8%)순으로 높은 응답률을
+                                기록했다.&lt;오징어게임&gt;의 글로벌 신드롬 영향으로 '드라마'가 전년도 5위에서 3위로 두 계단 상승
+                                한 것이 눈에 띕니다.
+                            </td>
+                        </tr>
+                    </table>
+                    <li><a id = "menu1-2">한국 문화콘텐츠 경험 후 한국에 대한 인식 변화</a></li>
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="chart-div">
+                                    <canvas id="pieChartCanvas" width="370px" height="370px"></canvas>
+                                </div>
+                                <script src="script.js"></script>
+                                <script>
+                                    window.onload = function () {
+                                        pieChartDraw();
+                                    }
+                            
+                                    let pieChartData = {
+                                        labels: ['긍정 64.2%', '변화없음30.5%', '부정5.3%'],
+                                        datasets: [{
+                                            data: [64.2, 30.5, 5.3],
+                                            backgroundColor: ['rgb(255, 99, 132)', 'rgb(255, 159, 64)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)']
+                                        }] 
+                                    };
+                            
+                                    let pieChartDraw = function () {
+                                        let ctx = document.getElementById('pieChartCanvas').getContext('2d');
+                                        
+                                        window.pieChart = new Chart(ctx, {
+                                            type: 'pie',
+                                            data: pieChartData,
+                                            options: {
+                                                responsive: false
+                                            }
+                                        });
+                                    };
+                                </script>
+                            </td>
+                            <td id = text-4>
+                                한국 문화 컨텐츠를 경험한 이후 한국에 대한 인식이 긍정적으로 바뀌었다는 응답은 64.2%로 2020년과
+                                비교해 5.4% 증가했습니다. 인도(83.2%), 태국(82.4%), 베트남(80.2%) 등 동남아 국가의 긍정 변화 비율이 
+                                상대적으로 높았고, UAE(76.5%)와 남아공(73.5%)도 70% 이상의 높은 수치를 기록했습니다.
+                            </td>
+                        </tr>
+                    </table>
+                    <li><a id = "menu1-3">한국 문화컨텐츠 호감도</a></li>
+                    
+                        <p id = "text-5">한국 문화 컨텐츠에 대한 호감도는 '드라마'가 81.6%로 가장 높았고, 그 다음으로는 '영화'(80.6%),'예능'(79.9),
+                            '음식'(78.5%),'뷰티'(78.3%),'패션'(77.3%),'게임'(76.7),'출판물'(75.8),'애니메이션'(74.7),'음악'(73.7)순 입니다.</p>
+                    <div style = "text-align: center; padding-top: 10px;">
+                        <img src= "media/preference.png" width = "500px" height = "550px" >
+                    </div>
+                    <li><a id = "menu1-4">한국 문화컨텐츠 소비 비중</a></li>
+                    <p id = "text-6">해외 한류 소비자의 전체 문화 콘텐츠 소비량 중 한국 콘텐츠 비중은 '뷰티'가 31.7%로 가장
+                        높았고, 그 다음으로는 '드라마'(31.0%),'패션'(29.2%),'예능'(28.6%),'영화'(28.6%)순 입니다.</p>
+                    <div style = "text-align: center; padding-top: 10px;">
+                        <img src = "media/consumption.png" width = "500px" height = "600px">
+                    </div>
+                </ul> 
+            </li>
+            <li>
+                <ul style = "padding-top: 30px;"><a id = "menu2">콘텐츠 카테고리별 선호도 순위</a>
+                    <div class = preference>
+                        <li><a id = "menu2-1">가장 선호하는 한국 드라마</a><img src = "media/drama.png" width = "19px" height = "19px"></li>
+                        <table>
+                            <tr><td><span>TOP1. 오징어 게임</span></td><td>21.2%</td></tr>
+                            <tr><td><span>Top2. 사랑의 불시착</span></td><td>2.2%</td></tr>
+                            <tr><td><span>Top3. 빈센조</span></td><td>1.9%</td></tr>
+                            <tr><td><span>Top4. 펜트하우스</span></td><td>1.6%</td></tr>
+                            <tr><td><span>Top5. 갯마을 차차차/태양의 후예</span></td><td>1.4%</td></td></tr>  
+                            <img id = "chart" src= "media/drama-chart.png" width = "300" width =" 200">                         
+                        </table>
+                        <li><a id = "menu2-2">가장 선호하는 한국 배우</a><img src = "media/actor.png" width = "19px" height = "19px"></li>
+                        <table>
+                            <tr><td><span>TOP1. 이민호</span></td><td>9.3%</td></tr>
+                            <tr><td><Span>Top2. 현빈</Span></td><td>3.1%</td></tr>
+                            <tr><td><Span>Top3. 공유</Span></td><td>2.8%</td></tr>
+                            <tr><td><Span>Top4. 송혜교</Span></td><td>2.2%</td></tr>
+                            <tr><td><span>Top5. 송중기</span></td><td>2.1%</td></tr>
+                            <img id = "chart" src= "media/actor-chart.png" width = "300" width =" 200">  
+                        </table>
+                        <li><a id = "menu2-3">가장 선호하는 한국 영화</a><img src = "media/movie.png" width = "19px" height = "19px"></li>
+                        <table>
+                            <tr><td><span>TOP1. 기생충</span></td><td>10.3%</td></tr>
+                            <tr><td><Span>Top2. 부산행</Span></td><td>6.8%</td></tr>
+                            <tr><td><Span>Top3. 서복</Span></td><td>1.5%</td></tr>
+                            <tr><td><span>Top4. 미드나이트/승리호</span></td><td>1.3%</td></tr>
+                            <tr><td><Span>Top5. 콜/싱크홀</Span></td><td>1.1%</td></tr>
+                            <img id = "chart" src= "media/movie-chart.png" width = "300" width =" 200">  
+                        </table>
+                        <li style = "padding-top: 18px;"><a id = "menu2-4">가장 선호하는 한국 가수/그룹</a><img src = "media/singer.png" width = "19px" height = "19px"></li>
+                        <table>
+                            <tr><td><span>TOP1.방탄소년단</span></td><td>26.7%</td><td></td></tr>
+                            <tr><td><Span>Top2.블랙핑크</Span></td><td>10.4%</td><td></td></tr>
+                            <tr><td><Span>Top3.아이유</Span></td><td>2.8%</td><td></td></tr>
+                            <tr><td><Span>Top4.리사(블랙핑크)</Span></td><td>2.4%</td><td></td></tr>
+                            <tr><td><span>Top5.싸이/트와이스</span></td><td>2.1%</td><td></td></tr>
+                            <img id = "chart" src= "media/singer-chart.png" width = "300" width =" 200">  
+                        </table>
+                    </div>
+                </ul> 
+            </li>
+        </ul>
+    </section>  
+    <footer class = "footer">
+        <div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,88 @@
+/*main.css*/
+section{
+    margin-left: 110px;
+    margin-right: 110px;
+}
+
+section.img{
+    display: block;
+    margin: auto;
+}
+
+#def{ /*한류의정의*/
+    font: bold 24px "nanumsquare_ac";
+    text-align: center;
+    padding-left: 70px;
+    padding-right: 70px;
+    line-height: 50px; 
+}
+
+#content {
+    padding-top: 40px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+#content > h3 {
+    font: bold 21px "nanumsquare_ac";
+    padding-bottom: 15px;
+}
+
+#def2 {
+    font: bold 15px "nanumsquare_ac";
+    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-right: 50px;
+    line-height: 45px;
+} 
+
+#content > hr {
+    width: 100%;
+    height: 2px;
+    background-color: #f0794a;
+    margin-bottom: 30px;
+    
+}
+
+#list {
+    padding-top: 40px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+#menu1 {
+    font: bold 21px "nanumsquare_ac";
+}
+
+#menu2 {
+    font: bold 21px "nanumsquare_ac";
+}
+
+#list > ul> li > ul > li {
+    font: bold 18px "nanumsquare_ac";
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+#def3 {
+    font: bold 15px "nanumsquare_ac";
+    padding-left: 50px;
+    line-height: 45px;
+}
+
+#text-4{
+    font: bold 15px "nanumsquare_ac";
+    padding-left: 50px;
+    line-height: 45px;
+}
+
+#text-5{
+    font: bold 15px "nanumsquare_ac";
+    padding-left: 50px;
+    line-height: 45px;
+}
+
+#text-6{
+    font: bold 15px "nanumsquare_ac";
+    padding-left: 50px;
+    line-height: 45px;
+}

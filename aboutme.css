@@ -1,0 +1,28 @@
+/*aboutme.css*/
+section {
+    margin-left: 170px;
+    margin-right: 170px;
+}
+
+body > section > h3 {
+    padding-top: 100px;
+    padding-bottom: 10px;;
+}
+
+body > section > hr {
+    width: 500px;
+    height: 2px;
+    background-color: #f0794a;
+    border: none;
+}
+
+section  td {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 40px; /*줄간격*/
+    padding-left: 8px;
+}
+
+section {
+    padding-left: 350px;
+}

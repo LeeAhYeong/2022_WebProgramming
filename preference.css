@@ -1,0 +1,28 @@
+.preference img {
+    padding-top: 10px;
+    padding-left: 6px;
+}
+
+.preference {
+    font: bold 15px "nanumsquare_ac";
+    line-height: 45px;
+}
+
+.preference li {
+    font: bold 18px "nanumsquare_ac";
+    padding-top: 20px;
+}
+
+.preference span {
+    font-weight: bold;
+    font-size:16px;
+    padding-right: 17px;
+}
+
+#chart {
+    float: right;
+    width: 400px;
+    height: 220px;
+    margin-right: 200px;
+}
+

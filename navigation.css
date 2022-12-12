@@ -1,0 +1,60 @@
+/*navBar.css*/
+
+/*여백제거*/
+* { 
+    margin: 0;
+    padding: 0;
+}
+
+/*ul li태그에 리스트 스타일 제거*/
+#nav > ul li{ 
+    list-style: none;
+}
+
+/*a태그 밑줄 표시 없애고 색상 블랙*/
+a{ 
+    text-decoration:none;
+    color:black;
+}
+
+/*글자 크기를 16px로 굵게 설정, width를 700, height를 50, 배경색은 #ccc, 
+글자색은 검정, 라인 높이 50px, menu박스 가운데 정렬, 글자 가운데 정렬*/
+#nav {
+    font: bold 16px "nanumsquare_bold";
+    width: 1300px;
+    height: 50px;
+    background: #F8C3A9;
+    color: black;
+    line-height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#nav > ul > li { /*큰 상위메뉴*/
+    float: left;
+    width: 325px;
+    position: relative;
+}
+
+#nav > ul > li:hover { /*큰 상위메뉴*/
+    background: #F1906B;
+    transition: ease 1s;
+}
+
+#nav > ul > li > ul { /*서브메뉴*/
+    width: 325px;
+    display: none;
+    position: absolute;
+    font-size: 14px;
+    background: #FEF1EB;
+}
+
+#nav > ul > li:hover > ul {
+    display: block;
+}
+
+#nav > ul > li > ul > li:hover{
+    background: #F1906B;
+    transition: ease 1s;
+}
